@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>'t Weeskind, Cadeaux &amp; Curiosa</title>
+  <meta name="description" content="'t Weeskind: brocante, antiek en cadeaux van Nelleke Moest, voorheen de winkel in Culemborg. Nu te vinden op markten.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="kop">
+    <p class="kop__naam">'t Weeskind</p>
+    <p class="kop__sub">Cadeaux &amp; Curiosa</p>
+  </header>
+
+  <main>
+    <figure class="hero">
+      <img src="img/hero.jpg" alt="Een houten kistje met zeepjes en een oude engelenprent in de winkel van 't Weeskind" width="1600" height="1067">
+    </figure>
+
+    <section class="blok intro">
+      <!-- Tekst uit de oude site (home en het afscheidsbericht van 29-1-2016), licht ingekort. -->
+      <p>Na acht en een half jaar is de winkel van 't Weeskind in Culemborg gesloten. U vindt ons nu op diverse markten, met mooie brocante, antiek en cadeaux.</p>
+    </section>
+
+    <section class="blok markten" id="markten">
+      <h1>Waar staan we</h1>
+      <!--
+        ONDERHOUD: één regel per markt. Zet de laatste dag in data-tot (JJJJ-MM-DD);
+        na die dag verdwijnt de regel vanzelf. Zonder data-tot blijft hij staan.
+        Staat er niets meer, dan toont de pagina de regel "Nieuwe data volgen".
+      -->
+      <ul class="markten__lijst">
+        <li data-tot="">
+          <span class="markt__wanneer">eind november, datum volgt</span>
+          <span class="markt__waar">Tuincentrum Vaarderhoogt, Soest</span>
+          <span class="markt__wat">met antieke kerstversiering</span>
+        </li>
+        <li data-tot="">
+          <span class="markt__wanneer">december, datum volgt</span>
+          <span class="markt__waar">Kerstmarkt in het oude stadhuis, Culemborg</span>
+        </li>
+      </ul>
+      <p class="markten__leeg" hidden>Nieuwe data volgen. Kijk op Facebook voor het laatste nieuws.</p>
+      <p class="markten__fb">Volg ons op <a href="https://www.facebook.com/Hetweeskind">Facebook</a> voor de actuele ontwikkelingen.</p>
+    </section>
+
+    <section class="fotos" aria-label="Foto's">
+      <img src="img/engelen.jpg" alt="Vier houten engelen op een rij" loading="lazy" width="900" height="605">
+      <img src="img/kaarsen.jpg" alt="Kaarsen en een rode theepot in de winkel" loading="lazy" width="900" height="777">
+      <img src="img/servies.jpg" alt="Blauw-wit servies en een geblokte theemuts" loading="lazy" width="900" height="600">
+      <img src="img/hangers.jpg" alt="Hangers met oude engelenprenten" loading="lazy" width="900" height="600">
+      <img src="img/blikjes.jpg" alt="Een engelenhanger en een oud zeepblik" loading="lazy" width="900" height="600">
+      <img src="img/brocante.jpg" alt="Brocante: een emaille kan, glaswerk en een beeldje" loading="lazy" width="900" height="600">
+    </section>
+
+    <section class="blok contact" id="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:info@hetweeskind.nl">info@hetweeskind.nl</a></p>
+      <p>Telefoon <a href="tel:+31620059114">06 20059114</a></p>
+      <p><a href="https://www.facebook.com/Hetweeskind">Facebook: 't Weeskind</a></p>
+    </section>
+
+    <section class="blok meer">
+      <details>
+        <summary>Waarom 't Weeskind?</summary>
+        <!-- Uit de oude pagina Culemborg, ingekort tot het deel over de naam. -->
+        <p>Het Elisabeth Weeshuis (Herenstraat 29) is één van de oudste gebouwen uit Culemborg. De schatrijke en kinderloze Vrouwe Elisabeth, gravin van Culemborg, liet het grootste deel van haar vermogen na aan de armen van de stad. Met het deel van het geld werd het Elisabeth Weeshuis gebouwd. In het huis woonden nog tot 1952 weeskinderen. Tegenwoordig is er een museum en bibliotheek gevestigd.</p>
+      </details>
+      <details>
+        <summary>In de pers</summary>
+        <ul>
+          <li>Buitenleven (juni 2009): De leukste adressen van Culemborg</li>
+          <li>Landelijke leefstijl gids (2009): een gids met landelijke adresjes</li>
+          <li>Libelle Balance (juli 2008): Nostalgie in glas</li>
+          <li>Culemborgse Courant (juni 2008): Romantische cadeaus bij Het Weeskind</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+
+  <footer class="voet">
+    <p>'t Weeskind, Nelleke Moest</p>
+  </footer>
+
+  <script>
+    // Verlopen markten verbergen; zonder markten de "nieuwe data volgen"-regel tonen.
+    (function () {
+      var vandaag = new Date().toISOString().slice(0, 10);
+      var regels = document.querySelectorAll('.markten__lijst li');
+      var zichtbaar = 0;
+      regels.forEach(function (li) {
+        var tot = li.getAttribute('data-tot');
+        if (tot && tot < vandaag) { li.hidden = true; } else { zichtbaar++; }
+      });
+      if (zichtbaar === 0) document.querySelector('.markten__leeg').hidden = false;
+    })();
+  </script>
+</body>
+</html>
