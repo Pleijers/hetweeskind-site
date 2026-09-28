@@ -74,6 +74,7 @@ h1, h2 {
 .markt__wanneer { font-weight: 700; }
 .markt__wat { font-style: italic; }
 .markten__leeg, .markten__fb { margin: 12px 0; }
+.markten__eerder { margin: 12px 0; font-size: .9em; opacity: .75; }
 
 .fotos {
   display: grid;
