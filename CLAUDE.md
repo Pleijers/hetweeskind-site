@@ -12,8 +12,11 @@ server gehaald. Nog geen git-repo. Oude template: Bootstrap 2 + jQuery 1.8, 8 pa
 Eén pagina (`nieuw/index.html` + `nieuw/style.css`, foto's verkleind in `nieuw/img/`). Getest op 375 en desktop:
 geen horizontaal scrollen, alle beelden laden, verlopen markten verdwijnen vanzelf (`data-tot`), zonder markten
 verschijnt "Nieuwe data volgen". Lokaal bekijken: `python3 -m http.server 4455 --directory nieuw` en dan
-http://127.0.0.1:4455. Bij publiceren wordt `nieuw/` de root van de GitHub Pages-repo; de oude bestanden hier zijn
-alleen nog bron.
+http://127.0.0.1:4455. Gepubliceerd (28-9): repo `Pleijers/hetweeskind-site` (public), GitHub Actions
+(`.github/workflows/pages.yml`) zet bij elke push naar `main` alleen `nieuw/` online op
+https://pleijers.github.io/hetweeskind-site/. De oude bestanden in de root zijn alleen nog bron.
+Domein koppelen (na akkoord moeder): `nieuw/CNAME` met `hetweeskind.nl`, custom domain in de Pages-instellingen,
+DNS naar GitHub Pages, daarna "Enforce HTTPS" aanzetten.
 Tekst: uit de oude site (home, afscheidsbericht 29-1-2016, Culemborg, Media), licht ingekort; niets verzonnen.
 Open: de twee markten staan erin zoals vorig jaar ("datum volgt"), nog bevestigen voor 2026.
 
