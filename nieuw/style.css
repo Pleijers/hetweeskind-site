@@ -74,9 +74,9 @@ h1, h2 {
 .markt__wanneer { font-weight: 700; }
 .markt__wat { font-style: italic; }
 .markten__leeg, .markten__fb { margin: 12px 0; }
-.markten__fotos { display: grid; gap: 8px; margin: 16px 0 0; }
+.markten__fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 16px 0 0; }
 .markten__fotos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
-@media (min-width: 700px) { .markten__fotos { grid-template-columns: 1fr 1fr; } }
+.markten__fotos .foto--boven { object-position: center top; }
 .markten__eerder { margin: 12px 0; font-size: .9em; opacity: .75; }
 
 .fotos {
