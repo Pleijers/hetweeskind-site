@@ -18,7 +18,9 @@ https://pleijers.github.io/hetweeskind-site/. De oude bestanden in de root zijn 
 Domein koppelen (na akkoord moeder): `nieuw/CNAME` met `hetweeskind.nl`, custom domain in de Pages-instellingen,
 DNS naar GitHub Pages, daarna "Enforce HTTPS" aanzetten.
 Tekst: uit de oude site (home, afscheidsbericht 29-1-2016, Culemborg, Media), licht ingekort; niets verzonnen.
-Open: de twee markten staan erin zoals vorig jaar ("datum volgt"), nog bevestigen voor 2026.
+Markten 2026 (van Nelleke, 28-9): Vaarderhoogt 18 t/m 21 nov, Kerstfair Culemborg 12-13 dec; Landgoedfair
+Marienwaerdt (20 t/m 23 aug) als "Eerder dit jaar"-regel (`.markten__eerder`, verdwijnt niet vanzelf). Antieke
+kerstversiering staat als specialiteit in de intro.
 
 ## Wat er moet komen
 Eén statische, mobielvriendelijke pagina (plain HTML/CSS, geen framework), op GitHub Pages met eigen domein:
@@ -33,7 +35,6 @@ De lege pagina's (assortiment, fotogalerij, shop) vervallen. Sfeer houden: mint 
 naam "'t Weeskind, Cadeaux & Curiosa". Geen em-dash in zichtbare tekst.
 
 ## Nog nodig van Liam
-- Marktdata voor dit najaar/de kerst (Liam vraagt het aan zijn moeder, 23-9).
 - Eventueel nieuwe foto's.
 
 ## Hosting en DNS: let op
